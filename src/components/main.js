@@ -1,4 +1,5 @@
 import React from 'react';
+
 import HornedBeast from './HornedBeast';
 
 class Main extends React.Component {
@@ -183,3 +184,4 @@ class Main extends React.Component {
 }
 
 export default Main;
+
