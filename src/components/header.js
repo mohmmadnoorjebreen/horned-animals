@@ -7,6 +7,7 @@ class Header extends React.Component {
             <header>
                <h1> horned animals </h1>
             </header>
+            
         )
     }
 }
