@@ -1,47 +1,68 @@
 import React from 'react';
 
+import Card from 'react-bootstrap/Card'
+
+
+
 
 class HornedBeast extends React.Component {
 
     constructor(props) {
-       
+
         super(props)
 
-      
+
         this.state = {
-            title: this.props.title,
-            image: this.props.image,
-            description: this.props.description,
-            star : 0
+            star: 0,
+            show: false
         }
     }
 
-  
+    save = () => {
+        this.props.selectedFunction(this.props.title);
+    }
+
     click = () => {
-        let newCount = this.state.star;
+
+        this.props.opens();
         this.setState({
-            star: newCount += 1
+            star: this.state.star + 1
         })
-    }  
-    
+
+    }
+
+    both = () => {
+        this.click();
+        this.save();
+
+    }
+
 
     render() {
 
         return (
-        <div>
-            <h1>
-            {this.state.title}
-            </h1>
-            <img onClick={this.click} src={this.state.image} alt={this.state.title} />
-            
-            <p>
-                {this.state.description}
-            </p>
-           <span>
-           &#9733;  {this.state.star} 
-           </span>
 
-        </div>
+            <div>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" onClick={this.both} src={this.props.image} alt={this.props.title} />
+                    <Card.Body>
+                        <Card.Title>{this.props.title}</Card.Title>
+                        <Card.Text>
+                            <div>
+                                {this.props.description}
+                            </div>
+                            <div>
+                                &hearts;  {this.state.star}
+                            </div>
+
+                        </Card.Text>
+
+                    </Card.Body>
+                </Card>
+            </div>
+
+
+
         )
     }
 }
