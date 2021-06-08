@@ -18,9 +18,9 @@ class HornedBeast extends React.Component {
 
   
     click = () => {
-        let newCount = this.state.star;
+        
         this.setState({
-            star: newCount += 1
+            star: this.state.star += 1
         })
     }  
     
@@ -38,7 +38,7 @@ class HornedBeast extends React.Component {
                 {this.state.description}
             </p>
            <span>
-           &#9733;  {this.state.star} 
+           &hearts; {this.state.star} 
            </span>
 
         </div>
