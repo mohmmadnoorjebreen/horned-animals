@@ -3,15 +3,47 @@ import React from 'react';
 import HornedBeast from './HornedBeast';
 
 
+import UseForm from './Form'
+
+
 
 
 class Main extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            allData: this.props.Data,
+        }
+    }
+
+    renderImg = (hornedNumber) => {
+    
+        
+       
+        let all = [];
+        this.props.Data.map(values => {
+
+            if (values.horns == `${hornedNumber}`) {
+                all.push(values)
+            } 
+            return  ;
+        })
+        if (hornedNumber === 'all') {
+                all = this.props.Data;
+        }
+        this.setState({
+            allData: all,
+
+        })
+
+    }
 
     open = () => {
         this.props.clicks();
-        
+
     }
+
 
 
 
@@ -22,7 +54,12 @@ class Main extends React.Component {
 
             <div>
                 {
-                    this.props.Data.map((value) => {
+                    <UseForm
+                        renderImg={this.renderImg}
+                    />
+                }
+                {
+                    this.state.allData.map((value) => {
                         return (
                             <HornedBeast
 
@@ -39,6 +76,9 @@ class Main extends React.Component {
                     })
 
                 }
+
+
+
 
 
             </div>

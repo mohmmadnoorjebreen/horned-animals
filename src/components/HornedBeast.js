@@ -5,13 +5,15 @@ import Card from 'react-bootstrap/Card'
 
 
 
+
+
+
+
 class HornedBeast extends React.Component {
 
     constructor(props) {
 
         super(props)
-
-
         this.state = {
             star: 0,
             show: false
@@ -43,6 +45,7 @@ class HornedBeast extends React.Component {
         return (
 
             <div>
+               
                 <Card style={{ width: '18rem' }}>
                     <Card.Img variant="top" onClick={this.both} src={this.props.image} alt={this.props.title} />
                     <Card.Body>
