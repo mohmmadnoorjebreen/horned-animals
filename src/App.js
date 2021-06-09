@@ -42,10 +42,11 @@ class App extends React.Component {
 
   selectedFunction = (name) => {
     let selected = 0;
-    let newdata = DataHorned.map(value => {
+    DataHorned.map(value => {
       if (value.title === name) {
         selected = value;
       }
+      return selected;
     })
     this.setState({
       selected: selected,
