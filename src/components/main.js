@@ -8,12 +8,7 @@ import HornedBeast from './HornedBeast';
 class Main extends React.Component {
 
 
-    open = () => {
-        this.props.clicks();
-        
-    }
-
-
+  
 
 
     render() {
@@ -30,7 +25,7 @@ class Main extends React.Component {
                                 image={value.image_url}
                                 description={value.description}
                                 selectedFunction={this.props.selectedFunction}
-                                opens={this.open}
+                                click={this.props.click}
 
 
                             />

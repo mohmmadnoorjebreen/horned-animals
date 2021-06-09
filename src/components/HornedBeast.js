@@ -24,7 +24,7 @@ class HornedBeast extends React.Component {
 
     click = () => {
 
-        this.props.opens();
+        this.props.click();
         this.setState({
             star: this.state.star + 1
         })

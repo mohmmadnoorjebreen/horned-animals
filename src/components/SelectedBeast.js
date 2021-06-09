@@ -7,9 +7,7 @@ export class SelectedBeast extends Component {
 
 
 
-    close = () => {
-        this.props.closes();
-    }
+ 
 
     render() {
         return (
@@ -28,7 +26,7 @@ export class SelectedBeast extends Component {
                             </div>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary"  onClick={this.close}>
+                            <Button variant="secondary"  onClick={this.props.close}>
                                 Close
                 </Button>
                             

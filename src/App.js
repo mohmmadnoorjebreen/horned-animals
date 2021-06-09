@@ -19,22 +19,17 @@ class App extends React.Component {
     this.state = {
       star: 0,
       show: false,
-      selected: "selected",
+      selected: "",
     }
   }
 
   click = () => {
-
-
     this.setState({
       show: true,
-
-
     })
   }
 
   close = () => {
-
     this.setState({
       show: false
     })
@@ -63,19 +58,18 @@ class App extends React.Component {
         <Main
           Data={DataHorned}
           selectedFunction = {this.selectedFunction}
-          clicks={this.click}
+          click={this.click}
 
         />
 
 
 
         <SelectedBeast
-          closes={this.close}
+          close={this.close}
           show={this.state.show}
           title = {this.state.selected.title}
           image = {this.state.selected.image_url}
           description = {this.state.selected.description}
-          opens={this.open}
         />
 
 
