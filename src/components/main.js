@@ -24,10 +24,10 @@ class Main extends React.Component {
         let all = [];
         this.props.Data.map(values => {
 
-            if (values.horns == `${hornedNumber}`) {
+            if (values.horns.toString() === `${hornedNumber}`) {
                 all.push(values)
             } 
-            return  ;
+            return all  ;
         })
         if (hornedNumber === 'all') {
                 all = this.props.Data;
