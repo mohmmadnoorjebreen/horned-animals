@@ -4,7 +4,7 @@ import HornedBeast from './HornedBeast';
 
 
 import UseForm from './Form'
-import { getAllByAltText } from '@testing-library/dom';
+
 
 
 
@@ -17,19 +17,19 @@ class Main extends React.Component {
         }
     }
 
-    renderImg = (x) => {
+    renderImg = (hornedNumber) => {
     
-        alert(x);
+        
        
         let all = [];
         this.props.Data.map(values => {
 
-            if (values.horns == `${x}`) {
+            if (values.horns == `${hornedNumber}`) {
                 all.push(values)
             } 
-            return ;
+            return  ;
         })
-        if (x === 'all') {
+        if (hornedNumber === 'all') {
                 all = this.props.Data;
         }
         this.setState({

@@ -5,7 +5,7 @@ import Form from 'react-bootstrap/Form'
 export class UseForm extends React.Component {
 
 
-    updatePosition = (e) => {
+    hornedFilter = (e) => {
         
         this.props.renderImg(e.target.value);
 
@@ -17,7 +17,7 @@ export class UseForm extends React.Component {
             <div>
                 <Form>
                 <Form.Label>Filter by Numbers of Horns</Form.Label>
-                    <Form.Control onChange={(e) => this.updatePosition(e)} as="select"  >
+                    <Form.Control onChange={(e) => this.hornedFilter(e)} as="select"  >
                     <option value="all">all</option>
                         <option value="1">1</option>
                         <option value="2">2</option>

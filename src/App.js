@@ -46,7 +46,7 @@ class App extends React.Component {
       if (value.title === name) {
         selected = value;
       }
-      return ;
+      return selected ;
     })
     this.setState({
       selected: selected,
