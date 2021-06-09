@@ -3,6 +3,8 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Main from './components/main';
 
+
+
 import SelectedBeast from './components/SelectedBeast'
 
 import DataHorned from './components/Data.json';
